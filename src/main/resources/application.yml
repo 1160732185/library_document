@@ -1,0 +1,10 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/booksearch?characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: Gzx@123
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  type-aliases-package: com.resetful.model
