@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="../static/css/advanceSearch.css">
+</head>
+<main id="main" class="layout-3col__full" role="main">
+    <h1>图书检索</h1>
+    <h2 class="visually-hidden">Primary tabs</h2>
+    <ul class="tabs">
+        <li class="tabs__tab"><a href="/simpleSearch" class="tabs__tab-link">简单搜索</a></li>
+        <li class="tabs__tab is-active"><a href="/advanceSearch" class="tabs__tab-link is-active active">高级搜索 <span class="visually-hidden">(active tab)</span></a></li>
+    </ul>
+
+    <div class="content" id="content">
+        <form action="/books/advquery" method="GET" id="ecust-lib-form-book-adv-query" accept-charset="UTF-8">
+            <div>
+                <div class="form-item form-type-radios form-item-type">
+                    <label for="edit-type">文献类型 <span class="form-required" title="This field is required.">*</span></label>
+                    <div id="edit-type" class="form-radios">
+                        <div class="form-item form-type-radio form-item-type">
+                            <input type="radio" id="edit-type-all" name="type" value="All" checked="checked" class="form-radio">
+                            <label class="option" for="edit-type-all">所有 </label>
+                        </div>
+
+                        <div class="form-item form-type-radio form-item-type">
+                            <input type="radio" id="edit-type-" name="type" value="纸质" class="form-radio">
+                            <label class="option" for="edit-type-">纸质 </label>
+                        </div>
+
+                        <div class="form-item form-type-radio form-item-type">
+                            <input type="radio" id="edit-type---2" name="type" value="电子书" class="form-radio">
+                            <label class="option" for="edit-type---2">电子书 </label>
+                        </div>
+
+                        <div class="form-item form-type-radio form-item-type">
+                            <input type="radio" id="edit-type---3" name="type" value="光盘" class="form-radio">
+                            <label class="option" for="edit-type---3">光盘 </label>
+                        </div>
+                    </div>
+                </div>
+        <div class="form-item form-type-textfield form-item-title">
+            <label for="edit-title">标题 </label>
+            <input placeholder="请输入..." type="text" id="edit-title" name="title" value="" size="60" maxlength="128" class="form-text">
+        </div>
+        <div class="form-item form-type-textfield form-item-author">
+            <label for="edit-author">作者 </label>
+            <input placeholder="请输入..." type="text" id="edit-author" name="author" value="" size="60" maxlength="128" class="form-text">
+        </div>
+        <div class="form-item form-type-textfield form-item-publish">
+            <label for="edit-publish">出版社 </label>
+            <input placeholder="请输入..." type="text" id="edit-publish" name="publish" value="" size="60" maxlength="128" class="form-text">
+        </div>
+        <div class="form-item form-type-textfield form-item-isbn">
+            <label for="edit-isbn">ISBN </label>
+            <input placeholder="请输入..." type="text" id="edit-isbn" name="isbn" value="" size="60" maxlength="128" class="form-text">
+        </div>
+        <div class="form-item form-type-textfield form-item-callNo">
+            <label for="edit-callno">索书号 </label>
+            <input placeholder="请输入..." type="text" id="edit-callno" name="callNo" value="" size="60" maxlength="128" class="form-text">
+        </div>
+        <input type="hidden" name="form_build_id" value="form-0wCDptaS-oEednCkpgp2OF9mjjLV4b3kwYS060wbSb0">
+        <input type="hidden" name="form_id" value="ecust_lib_form_book_adv_query">
+        <div class="form-actions form-wrapper" id="edit-actions">
+            <input type="submit" id="edit-submit" name="op" value="搜索" class="form-submit">
+        </div>
+        </div>
+    </form>
+</div>
+</main>
+</body>
+</html>
