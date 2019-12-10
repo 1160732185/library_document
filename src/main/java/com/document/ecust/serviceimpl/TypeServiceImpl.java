@@ -13,4 +13,21 @@ public class TypeServiceImpl implements TypeService {
     public Type[] getAllType() {
         return typeMapper.getAllType();
     }
+    @Override
+    public Type[] getTypeJQ(String para,String content)
+    {
+    switch (para){
+        case "name":
+            return typeMapper.getTypeJQN(content);
+        case "author":
+            return typeMapper.getTypeJQA(content);
+        case "publish":
+            return typeMapper.getTypeJQP(content);
+        case "callNo":
+            return typeMapper.getTypeJQC(content);
+        case "isbn":
+            return typeMapper.getTypeJQI(content);
+    }
+        return typeMapper.getTypeJQN(content);
+    }
 }
