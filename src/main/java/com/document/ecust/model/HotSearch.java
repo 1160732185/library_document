@@ -2,7 +2,7 @@ package com.document.ecust.model;
 
 public class HotSearch {
     String searchword;
-    long searchtime;
+    int searchtime;
 
     public String getSearchword() {
         return searchword;
@@ -16,7 +16,7 @@ public class HotSearch {
         return searchtime;
     }
 
-    public void setSearchtime(long searchtime) {
+    public void setSearchtime(int searchtime) {
         this.searchtime = searchtime;
     }
 }

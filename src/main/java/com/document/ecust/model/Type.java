@@ -82,4 +82,5 @@ public class Type {
     public void setLang(String lang) {
         this.lang = lang;
     }
+
 }
