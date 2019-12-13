@@ -54,4 +54,31 @@ public class MainController {
     public String[] getHot(){
         return typeService.getHot();
     }
+
+    @ApiOperation(value = "获得评论", notes = "获得评论", produces = "application/json")
+    @RequestMapping(value = "/comment/{isbn}",method = {RequestMethod.GET},produces = "application/json")
+    public String[] getComment(@PathVariable("isbn")String isbn){
+        return typeService.getComment(isbn);
+    }
+
+    @ApiOperation(value = "获得链接", notes = "获得链接", produces = "application/json")
+    @RequestMapping(value = "/conn/{isbn}",method = {RequestMethod.GET},produces = "application/json")
+    public String[] getConn(@PathVariable("isbn")String isbn){
+        System.out.println("链接"+isbn);
+        String s = typeService.getConn(isbn);
+        String[] ss = new String[1];
+        ss[0] = s;
+        return ss;
+    }
+
+    @ApiOperation(value = "添加评论", notes = "添加评论", produces = "application/json")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "comment", value = "comment", dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name = "isbn", value = "isbn", dataType = "String", paramType = "query")
+    })
+    @RequestMapping(value = "/addcomment",method = {RequestMethod.POST},produces = "application/json")
+    public String addComment(@RequestParam("comment")String comment,@RequestParam("isbn")String isbn){
+        System.out.println(comment+isbn);
+        return typeService.addComment(comment,isbn);
+    }
 }

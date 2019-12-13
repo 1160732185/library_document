@@ -11,4 +11,9 @@ public interface TypeService {
     Information getTypeAD(String name, String author, String publisher, String isbn, String callno);
     Information getTypeFM(String name, String author, String publisher, String isbn, String callno, String a, String d, String l, String t);
     String[] getHot();
+
+    String addComment(String comment,String isbn);
+    String[] getComment(String isbn);
+
+    String getConn(String isbn);
 }

@@ -189,4 +189,20 @@ public class TypeServiceImpl implements TypeService {
         String[] r =  typeMapper.getHotSearchByWord5();
         return r;
     }
+
+    @Override
+    public String addComment(String comment,String isbn) {
+        typeMapper.insertComment(comment,isbn);
+        return null;
+    }
+
+    @Override
+    public String[] getComment(String isbn) {
+        return typeMapper.getComment(isbn);
+    }
+
+    @Override
+    public String getConn(String isbn) {
+        return typeMapper.getConn(isbn);
+    }
 }

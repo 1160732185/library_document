@@ -34,4 +34,10 @@ public interface TypeMapper {
     Integer getAnobyIsbn(String isbn);
     @Select("select * from book where isbn = #{isbn}")
     Book[] getBooksbyIsbn(String isbn);
+    @Insert("insert into comment values(#{isbn},#{comment})")
+    void insertComment(String comment,String isbn);
+    @Select("select content from comment where isbn = #{isbn}")
+    String[] getComment(String isbn);
+    @Select("select conn from conn where isbn = #{isbn}")
+    String getConn(String isbn);
 }
